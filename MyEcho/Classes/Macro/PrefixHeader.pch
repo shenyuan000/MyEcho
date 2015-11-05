@@ -1,0 +1,81 @@
+//
+//  PrefixHeader.pch
+//  MyEcho
+//
+//  Created by iceAndFire on 15/10/11.
+//  Copyright © 2015年 free. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define HomePage_URL @"http://echosystem.kibey.com/sound/hot?page="
+
+#define Sound_URL @"http://echosystem.kibey.com/sound/info?sound_id="
+
+#define Channel_URL @"http://echosystem.kibey.com/channel/get?page="//
+#define HOT @"&with_sound=0&order=hot"
+#define NEW @"&with_sound=0&order=new"
+
+#define Comments_URL @"http://echosystem.kibey.com/bullet/get?type=1&rand=1&page=1&limit=5&sound_id="
+#define Banner_URL @"http://echosystem.kibey.com/index/banner"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+
+
+#ifndef __OPTIMIZE__
+
+#define NSLog(...) NSLog(__VA_ARGS__)
+
+#else
+
+#define NSLog(...) {}
+
+#endif
+
+
+
+
+
+
+
+#import "Music.h"
+#import "User.h"
+#import "Sound.h"
+#import "Channel.h"
+#import "CategoryList.h"
+#import "Comments.h"
+#import "Banner.h"
+
+#import "DataManager.h"
+#import "PlayerHelper.h"
+
+#import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
+#import "UIColor+HYRandomColor.h"
+#import "AFNetworking.h"
+#import "UIKit+AFNetworking.h"
+#import "SDCycleScrollView.h"
+#import "MJExtension.h"
+#import "FileService.h"//清除缓冲
+
+#import "MMDrawerController.h"//抽屉
+#import "MMdrawerVisualState.h"
+#import "MMDrawerBarButtonItem.h"
+#import "UIViewController+MMDrawerController.h"
+
+#import "EchoViewController.h"
+#import "EchoTableViewController.h"
+
+#import "ReferralsCell.h"
+#import "ChannelEchoCell.h"
+#import "ShufflingCollectionCell.h"
+#import "EchoCollectionCell.h"
+
+#import "ProgressBar.h"
+#import "PlayerImageView.h"
+
+#endif /* PrefixHeader_pch */
